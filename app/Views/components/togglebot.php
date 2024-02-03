@@ -27,7 +27,7 @@ switch ($speed) {
 
 $togglebot_src = $wink ? '/assets/img/togglebot-wink.png' : '/assets/img/togglebot.png';
 if ($speed === 'surprise') {
-    $togglebot_src = '/images/unicorn.svg';
+    $togglebot_src = '/assets/img/unicorn.svg';
 }
 
 ?>
