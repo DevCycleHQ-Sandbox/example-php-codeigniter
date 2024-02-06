@@ -1,6 +1,6 @@
 # DevCycle PHP Server SDK Example App
 
-An example app built using the [DevCycle PHP Server SDK](https://docs.devcycle.com/sdk/server-side-sdks/php/)
+An example app built using the [DevCycle PHP Server SDK](https://docs.devcycle.com/sdk/server-side-sdks/php/) and the [CodeIgniter Framework](https://codeigniter.com/).
 
 ## Requirements
 
@@ -29,7 +29,7 @@ You can find this under [Settings > Environments](https://app.devcycle.com/r/env
 
 ### Development
 
-`php spark serve`
+`php spark serve --port=8080`
 
 Runs the app in the development mode. Requests may be sent to http://localhost:8080
 
