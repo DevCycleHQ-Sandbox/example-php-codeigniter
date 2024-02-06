@@ -1,6 +1,6 @@
 # DevCycle PHP Server SDK Example App
 
-An example app built using the [DevCycle PHP Server SDK](https://docs.devcycle.com/sdk/server-side-sdks/php/) and the [CodeIgniter Framwork](https://codeigniter.com/).
+An example app built using the [DevCycle PHP Server SDK](https://docs.devcycle.com/sdk/server-side-sdks/php/) and the [CodeIgniter Framework](https://codeigniter.com/).
 
 ## Requirements
 
