@@ -2,29 +2,24 @@
 
 namespace App\Controllers;
 
-use DevCycle\DevCycleConfiguration;
 use DevCycle\Api\DevCycleClient;
 use DevCycle\Model\DevCycleOptions;
 use DevCycle\Model\DevCycleUser;
-use GuzzleHttp\Client;
 
 class Home extends BaseController
 {
     public function index(): string
     {
 
+        // Create a new DevCycleOptions object, enabling debug mode or additional logging if true is passed.
+        $options = new DevCycleOptions(true);
 
-        // Configure API key authorization: bearerAuth
-        $config = DevCycleConfiguration::getDefaultConfiguration()->setApiKey(
-            "Authorization",
-            $_ENV["DEVCYCLE_SERVER_SDK_KEY"]
-        );
 
+        // Initialize the DevCycle client with the server SDK key obtained from environment variables and the previously defined options.
+        // This client will interact with the DevCycle API for feature flag evaluations.
         $devcycle_client = new DevCycleClient(
-            $config,
-            // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-            // This is optional, `GuzzleHttp\Client` will be used as default.
-            new Client(),
+            sdkKey: $_ENV["DEVCYCLE_SERVER_SDK_KEY"],
+            dvcOptions: $options
         );
 
         $user_data = new DevCycleUser(array(
